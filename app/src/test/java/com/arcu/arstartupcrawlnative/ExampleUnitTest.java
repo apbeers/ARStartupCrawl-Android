@@ -1,4 +1,4 @@
-package com.arcu.arstartupcrawl;
+package com.arcu.arstartupcrawlnative;
 
 import org.junit.Test;
 
