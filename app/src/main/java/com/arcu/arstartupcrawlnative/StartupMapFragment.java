@@ -1,9 +1,15 @@
 package com.arcu.arstartupcrawlnative;
 
+import android.*;
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,6 +83,9 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
 
         markerImageWidth = (int) (widthPixels * 0.05833333333);
         markerImageHeight = (int) (widthPixels * 0.05833333333 * 1.6153846154);
+
+
+
     }
 
     @Override
@@ -114,14 +123,61 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
         mListener = null;
     }
 
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        try {
+            mMap.setMyLocationEnabled(true);
+        } catch (SecurityException e) {
+            if (ContextCompat.checkSelfPermission(getActivity(),
+                    Manifest.permission.ACCESS_FINE_LOCATION)
+                    != PackageManager.PERMISSION_GRANTED) {
+
+                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                        1);
+
+            }
+        }
+
+
 
         // Add a marker in Sydney, Australia, and move the camera.
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case 1: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted, yay! Do the
+                    // contacts-related task you need to do.
+
+                    try {
+                        mMap.setMyLocationEnabled(true);
+                    } catch (SecurityException e) {
+
+                    }
+
+
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
     }
 
     /**
