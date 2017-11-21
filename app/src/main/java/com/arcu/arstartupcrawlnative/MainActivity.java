@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity
         MenuItem menuItem = navigationView.getMenu().getItem(0);
         navigationView.setNavigationItemSelectedListener(this);
         onNavigationItemSelected(menuItem);
+        navigationView.getMenu().getItem(0).setChecked(true);
     }
 
     @Override
@@ -119,6 +120,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onFragmentInteraction(Uri uri) {
-        
+
     }
 }
