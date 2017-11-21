@@ -7,7 +7,18 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,15 +28,18 @@ import android.view.ViewGroup;
  * Use the {@link StartupMapFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class StartupMapFragment extends Fragment {
+public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private GoogleMap mMap;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private int markerImageWidth;
+    private int markerImageHeight;
 
     private OnFragmentInteractionListener mListener;
 
@@ -58,13 +72,22 @@ public class StartupMapFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        final int widthPixels = getActivity().getResources().getDisplayMetrics().widthPixels;
+
+        markerImageWidth = (int) (widthPixels * 0.05833333333);
+        markerImageHeight = (int) (widthPixels * 0.05833333333 * 1.6153846154);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_startup_map, container, false);
+        View view = inflater.inflate(R.layout.fragment_startup_map, container, false);
+        MapFragment mapFragment = (MapFragment) this.getChildFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -89,6 +112,16 @@ public class StartupMapFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        // Add a marker in Sydney, Australia, and move the camera.
+        LatLng sydney = new LatLng(-34, 151);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 
     /**
