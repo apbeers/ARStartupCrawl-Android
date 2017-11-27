@@ -98,9 +98,9 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.startup_list) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.event_updates) {
 
         }
 
