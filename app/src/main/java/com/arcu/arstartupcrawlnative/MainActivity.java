@@ -1,5 +1,6 @@
 package com.arcu.arstartupcrawlnative;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.net.Uri;
@@ -16,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.arcu.arstartupcrawlnative.dummy.DummyContent;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -24,15 +26,22 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.OnMapReadyCallback;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, StartupMapFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        StartupMapFragment.OnFragmentInteractionListener,
+        StartupsFragment.OnListFragmentInteractionListener,
+        AnnouncementFragment.OnListFragmentInteractionListener {
 
+    int lastMenuItemId = 10;
     private NavigationView navigationView;
     private StartupMapFragment startupMapFragment;
+    private StartupsFragment startupsFragment;
+    private AnnouncementFragment announcementFragment;
     private final FragmentManager fragmentManager = getFragmentManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.AppTheme_NoActionBar);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -44,9 +53,14 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
         startupMapFragment = new StartupMapFragment();
+        startupsFragment = new StartupsFragment();
+        announcementFragment = new AnnouncementFragment();
+
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.add(R.id.container, startupMapFragment);
+        fragmentTransaction.add(R.id.container, startupsFragment);
+        fragmentTransaction.add(R.id.container, announcementFragment);
         fragmentTransaction.commit();
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -92,16 +106,42 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+
         int id = item.getItemId();
 
+        if (lastMenuItemId == id) {
+            if (lastMenuItemId == navigationView.getMenu().getItem(1).getItemId() || lastMenuItemId == navigationView.getMenu().getItem(2).getItemId()) {
+                lastMenuItemId = id;
+            } else {
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        } else {
+            lastMenuItemId = id;
+        }
+
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         if (id == R.id.startup_map) {
 
-
+            fragmentTransaction.show(startupMapFragment);
+            fragmentTransaction.hide(startupsFragment);
+            fragmentTransaction.hide(announcementFragment);
+            fragmentTransaction.commit();
 
         } else if (id == R.id.startup_list) {
 
+            fragmentTransaction.hide(startupMapFragment);
+            fragmentTransaction.show(startupsFragment);
+            fragmentTransaction.hide(announcementFragment);
+            fragmentTransaction.commit();
+
         } else if (id == R.id.event_updates) {
 
+            fragmentTransaction.hide(startupMapFragment);
+            fragmentTransaction.hide(startupsFragment);
+            fragmentTransaction.show(announcementFragment);
+            fragmentTransaction.commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -111,6 +151,11 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
 
     }
 }
