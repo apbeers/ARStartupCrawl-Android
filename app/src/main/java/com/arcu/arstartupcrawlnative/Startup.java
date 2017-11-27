@@ -1,11 +1,14 @@
 package com.arcu.arstartupcrawlnative;
 
+import android.support.annotation.Keep;
+
 import com.google.android.gms.maps.model.LatLng;
 
 /**
  * Created by andrew on 11/26/17.
  */
 
+@Keep
 public class Startup {
 
     private String description;
@@ -73,4 +76,6 @@ public class Startup {
     public String getUrl() {
         return url;
     }
+
+
 }
