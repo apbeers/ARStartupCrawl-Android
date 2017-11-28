@@ -61,6 +61,7 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
     private int markerImageWidth;
     private int markerImageHeight;
     private DatabaseReference mDatabase= FirebaseDatabase.getInstance().getReference();
+    private StartupManager startupManager = StartupManager.getManager();
 
     private OnFragmentInteractionListener mListener;
 
@@ -77,14 +78,11 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
+        
         final int widthPixels = getActivity().getResources().getDisplayMetrics().widthPixels;
 
         markerImageWidth = (int) (widthPixels * 0.05833333333);
         markerImageHeight = (int) (widthPixels * 0.05833333333 * 1.6153846154);
-
-
     }
 
     @Override
@@ -156,46 +154,20 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
         LatLng fayettevilleSquare = new LatLng(36.063610, -94.162561);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fayettevilleSquare, 15));
 
-        mDatabase.child("startups").addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+        final Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.raw.yellow_map_marker);
+        final Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, markerImageWidth,markerImageHeight,true);
+        final BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromBitmap(scaledBitmap);
 
 
-                Startup startup = dataSnapshot.getValue(Startup.class);
+        for (Startup startup:
+             startupManager.getStartups()) {
 
-                final Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.raw.yellow_map_marker);
-                final Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, markerImageWidth,markerImageHeight,true);
-                final BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromBitmap(scaledBitmap);
-
-                mMap.addMarker(new MarkerOptions()
-                        .position(startup.getLatLng())
-                        .title(startup.getTitle())
-                        .snippet(startup.getSnippet())
-                        .icon(bitmapDescriptor));
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-
-            }
-        });
+            mMap.addMarker(new MarkerOptions()
+                    .position(startup.getLatLng())
+                    .title(startup.getTitle())
+                    .snippet(startup.getSnippet())
+                    .icon(bitmapDescriptor));
+        }
 
     }
 
