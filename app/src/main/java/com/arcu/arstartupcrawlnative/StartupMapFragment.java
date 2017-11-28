@@ -124,6 +124,7 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        refreshStartups();
         try {
             mMap.setMyLocationEnabled(true);
         } catch (SecurityException e) {
