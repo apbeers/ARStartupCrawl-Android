@@ -157,6 +157,9 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
 
     public void refreshStartups() {
 
+        if (mMap == null)
+            return;
+
         mMap.clear();
         final Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.raw.yellow_map_marker);
         final Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, markerImageWidth,markerImageHeight,true);
