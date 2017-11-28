@@ -48,6 +48,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     private void createNotification(String messageTitle, String messageBody) {
         Intent intent = new Intent( this , MainActivity.class );
+        intent.putExtra("announcementFragment", true);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent resultIntent = PendingIntent.getActivity( this , 0, intent,
                 PendingIntent.FLAG_ONE_SHOT);
