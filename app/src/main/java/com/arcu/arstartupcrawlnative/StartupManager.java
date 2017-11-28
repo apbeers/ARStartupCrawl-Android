@@ -1,5 +1,7 @@
 package com.arcu.arstartupcrawlnative;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 
 /**
@@ -30,5 +32,4 @@ public class StartupManager {
     public static StartupManager getManager() {
         return manager;
     }
-
 }

@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.arcu.arstartupcrawlnative.StartupsFragment.OnListFragmentInteractionListener;
@@ -36,7 +37,7 @@ public class MyStartupsRecyclerViewAdapter extends RecyclerView.Adapter<MyStartu
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).getTitle());
+        holder.mLogoView.setImageBitmap(mValues.get(position).getBitmap());
         holder.mContentView.setText(mValues.get(position).getDescription());
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
@@ -58,14 +59,14 @@ public class MyStartupsRecyclerViewAdapter extends RecyclerView.Adapter<MyStartu
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
-        public final TextView mIdView;
+        public final ImageView mLogoView;
         public final TextView mContentView;
         public Startup mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            mIdView = (TextView) view.findViewById(R.id.id);
+            mLogoView = (ImageView) view.findViewById(R.id.startupLogo);
             mContentView = (TextView) view.findViewById(R.id.content);
         }
 

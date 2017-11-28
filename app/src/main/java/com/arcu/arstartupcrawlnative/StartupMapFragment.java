@@ -78,7 +78,7 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+
         final int widthPixels = getActivity().getResources().getDisplayMetrics().widthPixels;
 
         markerImageWidth = (int) (widthPixels * 0.05833333333);
@@ -153,14 +153,17 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
 
         LatLng fayettevilleSquare = new LatLng(36.063610, -94.162561);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fayettevilleSquare, 15));
+    }
 
+    public void refreshStartups() {
+
+        mMap.clear();
         final Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.raw.yellow_map_marker);
         final Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, markerImageWidth,markerImageHeight,true);
         final BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromBitmap(scaledBitmap);
-
-
+        
         for (Startup startup:
-             startupManager.getStartups()) {
+                startupManager.getStartups()) {
 
             mMap.addMarker(new MarkerOptions()
                     .position(startup.getLatLng())
@@ -168,7 +171,6 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
                     .snippet(startup.getSnippet())
                     .icon(bitmapDescriptor));
         }
-
     }
 
     @Override
@@ -180,26 +182,18 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
-                    // permission was granted, yay! Do the
-                    // contacts-related task you need to do.
-
                     try {
                         mMap.setMyLocationEnabled(true);
                     } catch (SecurityException e) {
 
                     }
 
-
                 } else {
 
-                    // permission denied, boo! Disable the
-                    // functionality that depends on this permission.
                 }
                 return;
             }
 
-            // other 'case' lines to check for other
-            // permissions this app might request
         }
     }
 

@@ -59,9 +59,7 @@ public class Startup {
     }
 
     @Keep
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
 
     @Keep
     public double getLatitude() {

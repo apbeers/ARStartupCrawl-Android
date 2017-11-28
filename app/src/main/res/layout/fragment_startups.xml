@@ -4,12 +4,13 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+    <ImageView
+        android:contentDescription="Startup Logo"
+        android:id="@+id/startupLogo"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginBottom="20sp"/>
 
     <TextView
         android:id="@+id/content"
