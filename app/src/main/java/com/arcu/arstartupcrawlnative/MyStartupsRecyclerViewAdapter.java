@@ -18,10 +18,10 @@ import java.util.List;
  */
 public class MyStartupsRecyclerViewAdapter extends RecyclerView.Adapter<MyStartupsRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<Startup> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public MyStartupsRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public MyStartupsRecyclerViewAdapter(List<Startup> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -36,8 +36,8 @@ public class MyStartupsRecyclerViewAdapter extends RecyclerView.Adapter<MyStartu
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        holder.mIdView.setText(mValues.get(position).getTitle());
+        holder.mContentView.setText(mValues.get(position).getDescription());
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +60,7 @@ public class MyStartupsRecyclerViewAdapter extends RecyclerView.Adapter<MyStartu
         public final View mView;
         public final TextView mIdView;
         public final TextView mContentView;
-        public DummyItem mItem;
+        public Startup mItem;
 
         public ViewHolder(View view) {
             super(view);

@@ -1,13 +1,9 @@
 package com.arcu.arstartupcrawlnative;
 
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -18,12 +14,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.arcu.arstartupcrawlnative.dummy.DummyContent;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -37,6 +32,8 @@ public class MainActivity extends AppCompatActivity
     private StartupsFragment startupsFragment;
     private AnnouncementFragment announcementFragment;
     private final FragmentManager fragmentManager = getFragmentManager();
+    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+    private StartupManager startupManager = StartupManager.getManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +65,35 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         onNavigationItemSelected(menuItem);
         navigationView.getMenu().getItem(0).setChecked(true);
+
+
+        databaseReference.child("startups").addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
+                startupManager.addStartup(dataSnapshot.getValue(Startup.class));
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     @Override
@@ -151,6 +177,11 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onListFragmentInteraction(Startup item) {
 
     }
 

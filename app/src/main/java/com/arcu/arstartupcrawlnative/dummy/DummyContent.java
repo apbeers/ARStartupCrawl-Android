@@ -60,7 +60,7 @@ public class DummyContent {
 
         public DummyItem(String id, String content, String details) {
             this.id = id;
-            this.content = content;
+            this.content = "Look at my content";
             this.details = details;
         }
 
