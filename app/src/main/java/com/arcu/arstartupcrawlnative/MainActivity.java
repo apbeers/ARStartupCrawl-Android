@@ -60,11 +60,18 @@ public class MainActivity extends AppCompatActivity
         fragmentTransaction.add(R.id.container, announcementFragment);
         fragmentTransaction.commit();
 
+
+        int menuItemIndex = 0;
+
+        if (getIntent().getBooleanExtra("announcementFragment", false)) {
+            menuItemIndex = 2;
+        }
+
         navigationView = (NavigationView) findViewById(R.id.nav_view);
-        MenuItem menuItem = navigationView.getMenu().getItem(0);
         navigationView.setNavigationItemSelectedListener(this);
+        MenuItem menuItem = navigationView.getMenu().getItem(menuItemIndex);
         onNavigationItemSelected(menuItem);
-        navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(menuItemIndex).setChecked(true);
 
 
         databaseReference.child("startups").addChildEventListener(new ChildEventListener() {
