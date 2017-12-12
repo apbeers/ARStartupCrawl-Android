@@ -26,6 +26,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.RingtoneManager;
@@ -47,6 +48,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
 
     private void createNotification(String messageTitle, String messageBody) {
+
+        SharedPreferences sharedPreferences = getBaseContext().getSharedPreferences("SaveAnnouncements", Context.MODE_PRIVATE);
+
         Intent intent = new Intent( this , MainActivity.class );
         intent.putExtra("announcementFragment", true);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
