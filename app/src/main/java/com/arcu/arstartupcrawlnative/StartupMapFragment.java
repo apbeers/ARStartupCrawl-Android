@@ -120,22 +120,18 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
         mListener = null;
     }
 
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         refreshStartups();
-        try {
+
+        if (ContextCompat.checkSelfPermission(getActivity(),
+                Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+
             mMap.setMyLocationEnabled(true);
-        } catch (SecurityException e) {
-            if (ContextCompat.checkSelfPermission(getActivity(),
-                    Manifest.permission.ACCESS_FINE_LOCATION)
-                    != PackageManager.PERMISSION_GRANTED) {
-
-                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                        1);
-
-            }
+        } else {
+            requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    1);
         }
 
         try {
@@ -200,9 +196,6 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
 
         }
     }
-
-
-
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
