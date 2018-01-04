@@ -1,4 +1,4 @@
-package com.arcu.arstartupcrawl;
+package com.arcu.arstartupcrawlnative;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
