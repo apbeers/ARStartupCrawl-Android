@@ -43,7 +43,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         //Log data to Log Cat
         Log.d(TAG, "From: " + remoteMessage.getFrom());
         Log.d(TAG, "Notification Message Body: " + remoteMessage.getNotification().getBody());
-        //create notification
+        //Send received notification to the server (POST)
         createNotification(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody());
     }
 

@@ -35,11 +35,12 @@ public class AnnouncementFragment extends Fragment {
     // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
-    private List<PushNotification> notificationList;
+    static List<PushNotification> notificationList;
     private Retrofit retrofit;
     static StartupClient client;
     boolean hasSetup = false;
     static View view;
+    static RecyclerView recyclerView;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -72,16 +73,20 @@ public class AnnouncementFragment extends Fragment {
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_announcement_list, container, false);
 
+        //notificationList = new List<PushNotification>();
+        //notificationList.add(new PushNotification("New", "new", "new"));
         //getGuestNotifications();
 
         // Set the adapter
         if (view instanceof RecyclerView) {
             Log.e("AF, onCreateView:", "Inside: instance of recyclerview");
             Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
+            recyclerView = (RecyclerView) view;
             if (mColumnCount <= 1) {
+                Log.e("AF, onCreateView:", "Inside: instance of recyclerview, if");
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             } else {
+                Log.e("AF, onCreateView:", "Inside: instance of recyclerview, else");
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
             recyclerView.setAdapter(new MyAnnouncementRecyclerViewAdapter(notificationList, mListener));
@@ -132,6 +137,8 @@ public class AnnouncementFragment extends Fragment {
             public void onResponse(Call<List<PushNotification>> call, Response<List<PushNotification>> response) {
                 notificationList = response.body();
                 Log.e("GUESTNOTIFICATION:", "Received " + notificationList.size() + " Notifications. " + notificationList.get(0).getTitle());
+                Log.e("GUESTNOTIFICATION:", "Received " + notificationList.size() + " Notifications. " + notificationList.get(1).getTitle());
+                recyclerView.getAdapter().notifyDataSetChanged();
             }
 
             @Override

@@ -28,7 +28,7 @@ public class MyAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<MyAn
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.custom_notification_row, parent, false);
+                .inflate(R.layout.fragment_announcement, parent, false);
         return new ViewHolder(view);
     }
 
