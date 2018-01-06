@@ -7,21 +7,20 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.arcu.arstartupcrawlnative.AnnouncementFragment.OnListFragmentInteractionListener;
-import com.arcu.arstartupcrawlnative.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
 /**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
+ * {@link RecyclerView.Adapter} that can display a {@link PushNotification} and makes a call to the
  * specified {@link OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
 public class MyAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<MyAnnouncementRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<PushNotification> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public MyAnnouncementRecyclerViewAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public MyAnnouncementRecyclerViewAdapter(List<PushNotification> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -29,15 +28,16 @@ public class MyAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<MyAn
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_announcement, parent, false);
+                .inflate(R.layout.custom_notification_row, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        holder.mTitleView.setText(mValues.get(position).getTitle());
+        holder.mContentView.setText(mValues.get(position).getBody());
+        holder.mDateView.setText(mValues.get(position).getDatetime());
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,20 +53,30 @@ public class MyAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<MyAn
 
     @Override
     public int getItemCount() {
-        return mValues.size();
+        try {
+            return mValues.size();
+        }catch(Exception e){
+            return 0;
+        }
+    }
+
+    public void updateData(){
+        notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
-        public final TextView mIdView;
+        public final TextView mTitleView;
         public final TextView mContentView;
-        public DummyItem mItem;
+        public final TextView mDateView;
+        public PushNotification mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            mIdView = (TextView) view.findViewById(R.id.id);
-            mContentView = (TextView) view.findViewById(R.id.content);
+            mTitleView = (TextView) view.findViewById(R.id.titleTextView);
+            mContentView = (TextView) view.findViewById(R.id.bodyTextView);
+            mDateView = (TextView) view.findViewById(R.id.dateTextView);
         }
 
         @Override

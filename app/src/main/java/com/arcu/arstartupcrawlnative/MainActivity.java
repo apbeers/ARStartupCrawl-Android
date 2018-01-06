@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity
         startupsFragment = new StartupsFragment();
         announcementFragment = new AnnouncementFragment();
 
+        announcementFragment.setupRetrofit();
+
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.add(R.id.container, startupMapFragment);
@@ -172,6 +174,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.event_updates) {
 
+            announcementFragment.getGuestNotifications();
             fragmentTransaction.hide(startupMapFragment);
             fragmentTransaction.hide(startupsFragment);
             fragmentTransaction.show(announcementFragment);
@@ -194,7 +197,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+    public void onListFragmentInteraction(PushNotification item) {
 
+    }
+
+    public AnnouncementFragment getAnnouncementFragment(){
+        return announcementFragment;
     }
 }
