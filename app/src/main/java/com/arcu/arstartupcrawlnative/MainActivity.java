@@ -2,6 +2,9 @@ package com.arcu.arstartupcrawlnative;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.ClipData;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -10,8 +13,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.arcu.arstartupcrawlnative.dummy.DummyContent;
 import com.google.firebase.database.ChildEventListener;
@@ -19,6 +24,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import static android.view.View.VISIBLE;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -28,6 +35,11 @@ public class MainActivity extends AppCompatActivity
         DashboardFragment.OnListFragmentInteractionListener {
 
     int lastMenuItemId = 10;
+    private boolean view_startup;
+    private Menu nav_menu, opt_menu;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
+    static MenuItem startupDash, optionsViewStartup;
     private NavigationView navigationView;
     private StartupMapFragment startupMapFragment;
     private StartupsFragment startupsFragment;
@@ -40,6 +52,13 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        sharedPreferences = getSharedPreferences("STARTUP_PREF", Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        view_startup = sharedPreferences.getBoolean("view_startup", false);
+
+        Log.e("MA: ", "'view_startup' is " + view_startup);
+
         setTheme(R.style.AppTheme_NoActionBar);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -78,6 +97,9 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         MenuItem menuItem = navigationView.getMenu().getItem(menuItemIndex);
         onNavigationItemSelected(menuItem);
+        startupDash = navigationView.getMenu().getItem(3);
+        startupDash.setVisible(view_startup);
+        //opt_menu.findItem(0).setChecked(view_startup);
         navigationView.getMenu().getItem(menuItemIndex).setChecked(true);
 
 
@@ -125,6 +147,8 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        opt_menu = menu;
+
         return true;
     }
 
@@ -137,7 +161,23 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            if(!item.isChecked()){
+                editor.putBoolean("view_startup", true);
+                editor.commit();
+                item.setChecked(true);
+                view_startup = true;
+                startupDash.setVisible(view_startup);
+                Log.e("MA:oOIS: ", "view_startup set to true");
+                //findViewById(R.id.startup_dash).setVisibility(View.INVISIBLE);
+            }else{
+                editor.putBoolean("view_startup", false);
+                editor.commit();
+                item.setChecked(false);
+                view_startup = false;
+                startupDash.setVisible(view_startup);
+                Log.e("MA:oOIS: ", "view_startup set to false");
+                //findViewById(R.id.startup_dash).setVisibility(VISIBLE);
+            }
         }
 
         return super.onOptionsItemSelected(item);
@@ -147,7 +187,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-
         int id = item.getItemId();
 
         if (lastMenuItemId == id) {
@@ -195,6 +234,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.hide(announcementFragment);
             fragmentTransaction.show(dashboardFragment);
             fragmentTransaction.commit();
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -216,5 +256,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onListFragmentInteraction(PushNotification item) {
 
+    }
+
+    public SharedPreferences getLocalSharedPreferences(){
+        return sharedPreferences;
     }
 }

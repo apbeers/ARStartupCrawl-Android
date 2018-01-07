@@ -3,6 +3,7 @@ package com.arcu.arstartupcrawlnative;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -22,14 +23,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by shawn on 1/7/2018.
+ * A fragment representing a list of Items.
+ * <p/>
+ * Activities containing this fragment MUST implement the {@link DashboardFragment.OnListFragmentInteractionListener}
+ * interface.
  */
-
 public class DashboardFragment extends Fragment {
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
     private int mColumnCount = 1;
-    private DashboardFragment.OnListFragmentInteractionListener mListener;
+    private OnListFragmentInteractionListener mListener;
     static List<PushNotification> notificationList = new ArrayList<>();
     private Retrofit retrofit;
     static StartupClient client;
@@ -73,10 +77,10 @@ public class DashboardFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_dashboard_list, container, false);
 
         // Set the adapter
-        if (view instanceof RecyclerView) {
-            Log.e("AF, onCreateView:", "Inside: instance of recyclerview");
+        if (view instanceof ConstraintLayout) {
+            Log.e("AF, onCreateView:", "Inside: instance of ConstraintLayout");
             Context context = view.getContext();
-            recyclerView = (RecyclerView) view;
+            recyclerView = (RecyclerView) view.findViewById(R.id.dash_list);
             if (mColumnCount <= 1) {
                 Log.e("AF, onCreateView:", "Inside: instance of recyclerview, if");
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
