@@ -9,6 +9,8 @@ import android.widget.TextView;
 import com.arcu.arstartupcrawlnative.AnnouncementFragment.OnListFragmentInteractionListener;
 import com.arcu.arstartupcrawlnative.dummy.DummyContent;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 /**
@@ -38,6 +40,7 @@ public class MyAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<MyAn
         holder.mItem = mValues.get(position);
         holder.mIdView.setText(mValues.get(position).title);
         holder.mContentView.setText(mValues.get(position).body);
+        holder.mDateView.setText(mValues.get(position).datetime);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +63,7 @@ public class MyAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<MyAn
         public final View mView;
         public final TextView mIdView;
         public final TextView mContentView;
+        public final TextView mDateView;
         public PushNotification mItem;
 
         public ViewHolder(View view) {
@@ -67,6 +71,7 @@ public class MyAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<MyAn
             mView = view;
             mIdView = (TextView) view.findViewById(R.id.id);
             mContentView = (TextView) view.findViewById(R.id.content);
+            mDateView = (TextView) view.findViewById((R.id.dateView));
         }
 
         @Override
@@ -75,71 +80,4 @@ public class MyAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<MyAn
         }
     }
 
-    /*private final List<PushNotification> mValues;
-    private final OnListFragmentInteractionListener mListener;
-
-    public MyAnnouncementRecyclerViewAdapter(List<PushNotification> items, OnListFragmentInteractionListener listener) {
-        mValues = items;
-        mListener = listener;
-    }
-
-    @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_announcement, parent, false);
-        return new ViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(final ViewHolder holder, int position) {
-        holder.mItem = mValues.get(position);
-        holder.mTitleView.setText(mValues.get(position).getTitle());
-        holder.mContentView.setText(mValues.get(position).getBody());
-        holder.mDateView.setText(mValues.get(position).getDatetime());
-
-        holder.mView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (null != mListener) {
-                    // Notify the active callbacks interface (the activity, if the
-                    // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
-                }
-            }
-        });
-    }
-
-    @Override
-    public int getItemCount() {
-        try {
-            return mValues.size();
-        }catch(Exception e){
-            return 0;
-        }
-    }
-
-    public void updateData(){
-        notifyDataSetChanged();
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        public final View mView;
-        public final TextView mTitleView;
-        public final TextView mContentView;
-        public final TextView mDateView;
-        public PushNotification mItem;
-
-        public ViewHolder(View view) {
-            super(view);
-            mView = view;
-            mTitleView = (TextView) view.findViewById(R.id.titleTextView);
-            mContentView = (TextView) view.findViewById(R.id.bodyTextView);
-            mDateView = (TextView) view.findViewById(R.id.dateTextView);
-        }
-
-        @Override
-        public String toString() {
-            return super.toString() + " '" + mContentView.getText() + "'";
-        }
-    }*/
 }
