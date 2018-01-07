@@ -24,13 +24,15 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         StartupMapFragment.OnFragmentInteractionListener,
         StartupsFragment.OnListFragmentInteractionListener,
-        AnnouncementFragment.OnListFragmentInteractionListener {
+        AnnouncementFragment.OnListFragmentInteractionListener,
+        DashboardFragment.OnListFragmentInteractionListener {
 
     int lastMenuItemId = 10;
     private NavigationView navigationView;
     private StartupMapFragment startupMapFragment;
     private StartupsFragment startupsFragment;
     private AnnouncementFragment announcementFragment;
+    private DashboardFragment dashboardFragment;
     private final FragmentManager fragmentManager = getFragmentManager();
     private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
     private StartupManager startupManager = StartupManager.getManager();
@@ -52,14 +54,17 @@ public class MainActivity extends AppCompatActivity
         startupMapFragment = new StartupMapFragment();
         startupsFragment = new StartupsFragment();
         announcementFragment = new AnnouncementFragment();
+        dashboardFragment = new DashboardFragment();
 
-        announcementFragment.setupRetrofit();
+        //announcementFragment.setupRetrofit();
+        //dashboardFragment.setupRetrofit();
 
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.add(R.id.container, startupMapFragment);
         fragmentTransaction.add(R.id.container, startupsFragment);
         fragmentTransaction.add(R.id.container, announcementFragment);
+        fragmentTransaction.add(R.id.container, dashboardFragment);
         fragmentTransaction.commit();
 
 
@@ -163,6 +168,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.show(startupMapFragment);
             fragmentTransaction.hide(startupsFragment);
             fragmentTransaction.hide(announcementFragment);
+            fragmentTransaction.hide(dashboardFragment);
             fragmentTransaction.commit();
 
         } else if (id == R.id.startup_list) {
@@ -170,6 +176,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.hide(startupMapFragment);
             fragmentTransaction.show(startupsFragment);
             fragmentTransaction.hide(announcementFragment);
+            fragmentTransaction.hide(dashboardFragment);
             fragmentTransaction.commit();
 
         } else if (id == R.id.event_updates) {
@@ -178,6 +185,15 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.hide(startupMapFragment);
             fragmentTransaction.hide(startupsFragment);
             fragmentTransaction.show(announcementFragment);
+            fragmentTransaction.hide(dashboardFragment);
+            fragmentTransaction.commit();
+        } else if (id == R.id.startup_dash) {
+
+            dashboardFragment.refreshFragment();
+            fragmentTransaction.hide(startupMapFragment);
+            fragmentTransaction.hide(startupsFragment);
+            fragmentTransaction.hide(announcementFragment);
+            fragmentTransaction.show(dashboardFragment);
             fragmentTransaction.commit();
         }
 

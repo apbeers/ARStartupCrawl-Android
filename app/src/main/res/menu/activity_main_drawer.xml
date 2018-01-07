@@ -16,5 +16,9 @@
             android:id="@+id/event_updates"
             android:icon="@drawable/ic_announcement_black_24dp"
             android:title="Announcements" />
+        <item
+            android:id="@+id/startup_dash"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Startup Dashboard" />
     </group>
 </menu>
