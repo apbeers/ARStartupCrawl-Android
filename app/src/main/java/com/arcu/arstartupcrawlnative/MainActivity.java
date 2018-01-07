@@ -197,11 +197,8 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public void onListFragmentInteraction(PushNotification item) {
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
 
     }
 
-    public AnnouncementFragment getAnnouncementFragment(){
-        return announcementFragment;
-    }
 }

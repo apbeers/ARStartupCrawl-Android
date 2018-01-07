@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 
+import com.arcu.arstartupcrawlnative.dummy.DummyContent;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -89,7 +91,7 @@ public class AnnouncementFragment extends Fragment {
                 Log.e("AF, onCreateView:", "Inside: instance of recyclerview, else");
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyAnnouncementRecyclerViewAdapter(notificationList, mListener));
+            recyclerView.setAdapter(new MyAnnouncementRecyclerViewAdapter(DummyContent.ITEMS, mListener));
         }
         return view;
     }
@@ -124,7 +126,7 @@ public class AnnouncementFragment extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(PushNotification item);
+        void onListFragmentInteraction(DummyContent.DummyItem item);
     }
 
     public void getGuestNotifications(){
