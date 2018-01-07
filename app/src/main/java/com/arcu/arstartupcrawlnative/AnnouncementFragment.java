@@ -37,7 +37,7 @@ public class AnnouncementFragment extends Fragment {
     // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
-    static List<PushNotification> notificationList;
+    static List<PushNotification> notificationList = new ArrayList<>();
     private Retrofit retrofit;
     static StartupClient client;
     boolean hasSetup = false;
@@ -65,6 +65,8 @@ public class AnnouncementFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        notificationList.add(new PushNotification("New", "new", "new"));
+
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
@@ -91,7 +93,7 @@ public class AnnouncementFragment extends Fragment {
                 Log.e("AF, onCreateView:", "Inside: instance of recyclerview, else");
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyAnnouncementRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.setAdapter(new MyAnnouncementRecyclerViewAdapter(notificationList, mListener));
         }
         return view;
     }
@@ -126,7 +128,7 @@ public class AnnouncementFragment extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyContent.DummyItem item);
+        void onListFragmentInteraction(PushNotification item);
     }
 
     public void getGuestNotifications(){
@@ -137,7 +139,8 @@ public class AnnouncementFragment extends Fragment {
         call.enqueue(new Callback<List<PushNotification>>() {
             @Override
             public void onResponse(Call<List<PushNotification>> call, Response<List<PushNotification>> response) {
-                notificationList = response.body();
+                notificationList.clear();
+                notificationList.addAll(response.body());
                 Log.e("GUESTNOTIFICATION:", "Received " + notificationList.size() + " Notifications. " + notificationList.get(0).getTitle());
                 Log.e("GUESTNOTIFICATION:", "Received " + notificationList.size() + " Notifications. " + notificationList.get(1).getTitle());
                 recyclerView.getAdapter().notifyDataSetChanged();
@@ -148,6 +151,10 @@ public class AnnouncementFragment extends Fragment {
                 Log.e("GUESTNOTIFICATION:", "Did not receive Guest Notifications from database");
             }
         });
+    }
+
+    public void refreshFragment(){
+        getGuestNotifications();
     }
 
     public void setupRetrofit(){

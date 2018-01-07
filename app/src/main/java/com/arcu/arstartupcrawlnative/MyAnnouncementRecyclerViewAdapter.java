@@ -18,10 +18,10 @@ import java.util.List;
  */
 public class MyAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<MyAnnouncementRecyclerViewAdapter.ViewHolder> {
 
-    private final List<DummyContent.DummyItem> mValues;
+    private final List<PushNotification> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public MyAnnouncementRecyclerViewAdapter(List<DummyContent.DummyItem> items, OnListFragmentInteractionListener listener) {
+    public MyAnnouncementRecyclerViewAdapter(List<PushNotification> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -36,8 +36,8 @@ public class MyAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<MyAn
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText(mValues.get(position).content);
+        holder.mIdView.setText(mValues.get(position).title);
+        holder.mContentView.setText(mValues.get(position).body);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +60,7 @@ public class MyAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<MyAn
         public final View mView;
         public final TextView mIdView;
         public final TextView mContentView;
-        public DummyContent.DummyItem mItem;
+        public PushNotification mItem;
 
         public ViewHolder(View view) {
             super(view);
