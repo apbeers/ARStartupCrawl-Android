@@ -16,10 +16,9 @@ public class Startup {
 
 
     private String description;
-    private int id;
+    private String startup_id;
     private double latitude;
-    private String logo;
-    private String logoBase64;
+    private String logobase64;
     private double longitude;
     private String snippet;
     private String title;
@@ -31,12 +30,11 @@ public class Startup {
     }
 
     @Keep
-    public Startup(String description, int id, double latitude, String logo, String logoBase64, double longitude, String snippet, String title, String url) {
+    public Startup(String description, String startup_id, double latitude, String logobase64, double longitude, String snippet, String title, String url) {
         this.description = description;
-        this.id = id;
+        this.startup_id = startup_id;
         this.latitude = latitude;
-        this.logo = logo;
-        this.logoBase64 = logoBase64;
+        this.logobase64 = logobase64;
         this.longitude = longitude;
         this.snippet = snippet;
         this.title = title;
@@ -45,7 +43,7 @@ public class Startup {
 
     @Keep
     public Bitmap getBitmap() {
-        byte[] bytes = Base64.decode(this.logoBase64, Base64.DEFAULT);
+        byte[] bytes = Base64.decode(this.logobase64, Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
     }
 
@@ -60,7 +58,7 @@ public class Startup {
     }
 
     @Keep
-    public int getId() { return id; }
+    public String getStartup_Id() { return startup_id; }
 
     @Keep
     public double getLatitude() {
@@ -68,13 +66,8 @@ public class Startup {
     }
 
     @Keep
-    public String getLogo() {
-        return logo;
-    }
-
-    @Keep
-    public String getLogoBase64() {
-        return logoBase64;
+    public String getLogobase64() {
+        return logobase64;
     }
 
     @Keep

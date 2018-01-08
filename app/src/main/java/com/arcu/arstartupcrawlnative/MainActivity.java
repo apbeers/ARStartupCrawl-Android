@@ -102,35 +102,8 @@ public class MainActivity extends AppCompatActivity
         //opt_menu.findItem(0).setChecked(view_startup);
         navigationView.getMenu().getItem(menuItemIndex).setChecked(true);
 
-
-        databaseReference.child("startups").addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-
-                startupManager.addStartup(dataSnapshot.getValue(Startup.class));
-                startupMapFragment.refreshStartups();
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+        startupManager.refreshStartups(startupMapFragment);
+        startupMapFragment.refreshStartups();
     }
 
     @Override
@@ -260,5 +233,9 @@ public class MainActivity extends AppCompatActivity
 
     public SharedPreferences getLocalSharedPreferences(){
         return sharedPreferences;
+    }
+
+    public void refreshMaps(){
+
     }
 }
