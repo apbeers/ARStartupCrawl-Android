@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.arcu.arstartupcrawlnative.dummy.DummyContent;
 import com.google.firebase.database.ChildEventListener;
@@ -26,6 +27,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import static android.view.View.VISIBLE;
+import static java.security.AccessController.getContext;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -36,7 +38,6 @@ public class MainActivity extends AppCompatActivity
 
     int lastMenuItemId = 10;
     private boolean view_startup;
-    private Menu nav_menu, opt_menu;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
     static MenuItem startupDash, optionsViewStartup;
@@ -75,9 +76,6 @@ public class MainActivity extends AppCompatActivity
         announcementFragment = new AnnouncementFragment();
         dashboardFragment = new DashboardFragment();
 
-        //announcementFragment.setupRetrofit();
-        //dashboardFragment.setupRetrofit();
-
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.add(R.id.container, startupMapFragment);
@@ -99,11 +97,18 @@ public class MainActivity extends AppCompatActivity
         onNavigationItemSelected(menuItem);
         startupDash = navigationView.getMenu().getItem(3);
         startupDash.setVisible(view_startup);
-        //opt_menu.findItem(0).setChecked(view_startup);
+
+
+
         navigationView.getMenu().getItem(menuItemIndex).setChecked(true);
 
         startupManager.refreshStartups(startupMapFragment);
         startupMapFragment.refreshStartups();
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
     }
 
     @Override
@@ -120,7 +125,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        opt_menu = menu;
+
 
         return true;
     }
@@ -134,22 +139,20 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            if(!item.isChecked()){
+            if(!view_startup){
                 editor.putBoolean("view_startup", true);
                 editor.commit();
-                item.setChecked(true);
                 view_startup = true;
                 startupDash.setVisible(view_startup);
-                Log.e("MA:oOIS: ", "view_startup set to true");
-                //findViewById(R.id.startup_dash).setVisibility(View.INVISIBLE);
+                Toast.makeText(getApplicationContext(), "Startup Notifications ON", Toast.LENGTH_LONG).show();
             }else{
                 editor.putBoolean("view_startup", false);
                 editor.commit();
-                item.setChecked(false);
                 view_startup = false;
                 startupDash.setVisible(view_startup);
-                Log.e("MA:oOIS: ", "view_startup set to false");
-                //findViewById(R.id.startup_dash).setVisibility(VISIBLE);
+                MenuItem menuItem = navigationView.getMenu().getItem(0);
+                onNavigationItemSelected(menuItem);
+                Toast.makeText(getApplicationContext(), "Startup Notifications OFF", Toast.LENGTH_LONG).show();
             }
         }
 
