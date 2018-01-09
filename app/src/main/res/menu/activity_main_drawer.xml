@@ -20,6 +20,6 @@
             android:id="@+id/startup_dash"
             android:visible="false"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Startup Dashboard" />
+            android:title="Startup Announcements" />
     </group>
 </menu>
