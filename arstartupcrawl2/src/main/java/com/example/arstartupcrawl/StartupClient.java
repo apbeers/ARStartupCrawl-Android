@@ -25,8 +25,8 @@ public interface StartupClient {
     @GET("notifications/startup")
     Call<List<PushNotification>> getStartupNotifications();
 
-    @GET("startups")
-    Call<List<Startup>> getAllStartups();
+    @GET("startups/nopics")
+    Call<List<Startup>> getAllStartupsNoPics();
 
     @PUT("notifications/guest")
     Call<PushNotification> addGuestNotification(@Body PushNotification notification);
