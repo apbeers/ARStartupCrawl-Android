@@ -1,0 +1,72 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v24\\values-v24.xml",
+            "map": [
+                {
+                    "source": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "929"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "315",
+                        "endLines": "18",
+                        "endColumns": "12",
+                        "endOffsets": "1189"
+                    }
+                },
+                {
+                    "source": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\215c59d1b3b88a7427d4c736a2747c9b\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,121,182,248",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "116,177,243,310"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/arstartupcrawl2/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v24/values-v24.xml",
+            "map": [
+                {
+                    "source": "/Users/andrew/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/4ead5ae32f5e0323f4c63e0b53722104/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,121,182,248",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "116,177,243,310"
+                    }
+                },
+                {
+                    "source": "/Users/andrew/.gradle/caches/transforms-1/files-1.1/wear-26.1.0.aar/8355bdf1d4a669ced3cdf9f04124344b/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "929"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "315",
+                        "endLines": "18",
+                        "endColumns": "12",
+                        "endOffsets": "1189"
+                    }
+                }
+            ]
+        }
+    ]
+}
