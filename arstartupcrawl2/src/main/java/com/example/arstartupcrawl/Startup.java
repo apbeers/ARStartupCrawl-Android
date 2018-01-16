@@ -1,14 +1,12 @@
-package com.arcu.arstartupcrawlnative;
+package com.example.arstartupcrawl;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.annotation.Keep;
 import android.util.Base64;
 
-import com.google.android.gms.maps.model.LatLng;
-
 /**
- * Created by andrew on 11/26/17.
+ * Created by shawn on 1/7/2018.
  */
 
 @Keep
@@ -47,10 +45,10 @@ public class Startup {
         return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
     }
 
-    @Keep
-    public LatLng getLatLng() {
-        return new LatLng(latitude, longitude);
-    }
+    //@Keep
+    //public LatLng getLatLng() {
+       // return new LatLng(latitude, longitude);
+    //}
 
     @Keep
     public String getDescription() {

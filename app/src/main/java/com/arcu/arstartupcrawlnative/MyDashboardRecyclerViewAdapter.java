@@ -6,24 +6,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.arcu.arstartupcrawlnative.AnnouncementFragment.OnListFragmentInteractionListener;
-import com.arcu.arstartupcrawlnative.dummy.DummyContent;
-
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 /**
- * {@link RecyclerView.Adapter} that can display a {@link PushNotification} and makes a call to the
- * specified {@link OnListFragmentInteractionListener}.
- * TODO: Replace the implementation with code for your data type.
+ * Created by shawn on 1/7/2018.
  */
-public class MyAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<MyAnnouncementRecyclerViewAdapter.ViewHolder> {
+
+public class MyDashboardRecyclerViewAdapter extends RecyclerView.Adapter<MyDashboardRecyclerViewAdapter.ViewHolder> {
 
     private final List<PushNotification> mValues;
-    private final OnListFragmentInteractionListener mListener;
+    private final DashboardFragment.OnListFragmentInteractionListener mListener;
 
-    public MyAnnouncementRecyclerViewAdapter(List<PushNotification> items, OnListFragmentInteractionListener listener) {
+    public MyDashboardRecyclerViewAdapter(List<PushNotification> items, DashboardFragment.OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
