@@ -960,67 +960,6 @@
             ]
         },
         {
-            "outputFile": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-w228dp-v13_values-w228dp-v13.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\values-w228dp-v13\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7",
-                        "startColumns": "0,0,0,0",
-                        "startOffsets": "222,272,322,373",
-                        "endColumns": "49,49,50,49",
-                        "endOffsets": "271,321,372,422"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,109,163,218",
-                        "endColumns": "53,53,54,53",
-                        "endOffsets": "104,158,213,267"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-sw210dp-round-v23_values-sw210dp-round-v23.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\values-sw210dp-round-v23\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "221,282,340,404,460,516,574,633,677,759",
-                        "endColumns": "60,57,63,55,55,57,58,43,81,76",
-                        "endOffsets": "281,339,403,459,515,573,632,676,758,835"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,16,17",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,120,182,250,310,370,432,495,938,1024",
-                        "endColumns": "64,61,67,59,59,61,62,47,85,80",
-                        "endOffsets": "115,177,245,305,365,427,490,538,1019,1100"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\values-sw210dp-round-v23\\values-sw210dp-round-v23.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,123,188,259,322,385",
-                        "endColumns": "67,64,70,62,62,64",
-                        "endOffsets": "118,183,254,317,380,445"
-                    },
-                    "to": {
-                        "startLines": "10,11,12,13,14,15",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "543,611,676,747,810,873",
-                        "endColumns": "67,64,70,62,62,64",
-                        "endOffsets": "606,671,742,805,868,933"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-bn_values-bn.arsc.flat",
             "map": [
                 {
@@ -1072,6 +1011,67 @@
                         "startOffsets": "105,216,407,537,650,846,970,1112,1456,1660,1771,1958,2088,2281,2459,2549,2646",
                         "endColumns": "110,190,129,112,195,123,141,132,203,110,186,129,192,177,89,96,118",
                         "endOffsets": "211,402,532,645,841,965,1107,1240,1655,1766,1953,2083,2276,2454,2544,2641,2760"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-sw210dp-round-v23_values-sw210dp-round-v23.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\values-sw210dp-round-v23\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "221,282,340,404,460,516,574,633,677,759",
+                        "endColumns": "60,57,63,55,55,57,58,43,81,76",
+                        "endOffsets": "281,339,403,459,515,573,632,676,758,835"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,120,182,250,310,370,432,495,938,1024",
+                        "endColumns": "64,61,67,59,59,61,62,47,85,80",
+                        "endOffsets": "115,177,245,305,365,427,490,538,1019,1100"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\values-sw210dp-round-v23\\values-sw210dp-round-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,123,188,259,322,385",
+                        "endColumns": "67,64,70,62,62,64",
+                        "endOffsets": "118,183,254,317,380,445"
+                    },
+                    "to": {
+                        "startLines": "10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "543,611,676,747,810,873",
+                        "endColumns": "67,64,70,62,62,64",
+                        "endOffsets": "606,671,742,805,868,933"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-w228dp-v13_values-w228dp-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\values-w228dp-v13\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7",
+                        "startColumns": "0,0,0,0",
+                        "startOffsets": "222,272,322,373",
+                        "endColumns": "49,49,50,49",
+                        "endOffsets": "271,321,372,422"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,109,163,218",
+                        "endColumns": "53,53,54,53",
+                        "endOffsets": "104,158,213,267"
                     }
                 }
             ]
@@ -1818,6 +1818,62 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-mk_values-mk.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\cef7b47decd3b2a8c71c8b1d6579eef7\\res\\values-mk\\values-mk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "2837",
+                        "endColumns": "100",
+                        "endOffsets": "2933"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\668b4ba5573574f38e875568e7738aad\\res\\values-mk\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "281,386,579,710,818,1022,1153,1299,1434,1650,1755,1952,2083,2295,2480,2575,2665",
+                        "endColumns": "104,192,130,107,203,130,145,134,215,104,196,130,211,184,94,89,103",
+                        "endOffsets": "385,578,709,817,1021,1152,1298,1433,1649,1754,1951,2082,2294,2479,2574,2664,2768"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,214,407,542,654,858,993,1143,1478,1694,1803,2000,2135,2347,2536,2635,2729",
+                        "endColumns": "108,192,134,111,203,134,149,138,215,108,196,134,211,188,98,93,107",
+                        "endOffsets": "209,402,537,649,853,988,1138,1277,1689,1798,1995,2130,2342,2531,2630,2724,2832"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.8.0.aar\\1c149b40e892541c4a824373d2f282c0\\res\\values-mk\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "283",
+                        "endColumns": "195",
+                        "endOffsets": "478"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1282",
+                        "endColumns": "195",
+                        "endOffsets": "1473"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-fr_values-fr.arsc.flat",
             "map": [
                 {
@@ -1888,62 +1944,6 @@
                         "startOffsets": "5853",
                         "endColumns": "223",
                         "endOffsets": "6072"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-mk_values-mk.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\cef7b47decd3b2a8c71c8b1d6579eef7\\res\\values-mk\\values-mk.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "2837",
-                        "endColumns": "100",
-                        "endOffsets": "2933"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\668b4ba5573574f38e875568e7738aad\\res\\values-mk\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "281,386,579,710,818,1022,1153,1299,1434,1650,1755,1952,2083,2295,2480,2575,2665",
-                        "endColumns": "104,192,130,107,203,130,145,134,215,104,196,130,211,184,94,89,103",
-                        "endOffsets": "385,578,709,817,1021,1152,1298,1433,1649,1754,1951,2082,2294,2479,2574,2664,2768"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,214,407,542,654,858,993,1143,1478,1694,1803,2000,2135,2347,2536,2635,2729",
-                        "endColumns": "108,192,134,111,203,134,149,138,215,108,196,134,211,188,98,93,107",
-                        "endOffsets": "209,402,537,649,853,988,1138,1277,1689,1798,1995,2130,2342,2531,2630,2724,2832"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.8.0.aar\\1c149b40e892541c4a824373d2f282c0\\res\\values-mk\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "283",
-                        "endColumns": "195",
-                        "endOffsets": "478"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1282",
-                        "endColumns": "195",
-                        "endOffsets": "1473"
                     }
                 }
             ]

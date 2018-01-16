@@ -8,12 +8,12 @@
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\668b4ba5573574f38e875568e7738aad\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
-        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\cef7b47decd3b2a8c71c8b1d6579eef7\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
-    },
-    {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_tint.xml.flat",
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\668b4ba5573574f38e875568e7738aad\\res\\color\\common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\cef7b47decd3b2a8c71c8b1d6579eef7\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -24,12 +24,12 @@
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\drawable-hdpi-v4\\card_frame.9.png"
     },
     {
-        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ws_switch_thumb_mtrl_14w.png.flat",
-        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\drawable-hdpi-v4\\ws_switch_thumb_mtrl_14w.png"
-    },
-    {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\layout_ws_single_page_nav_drawer_3_item.xml.flat",
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\layout\\ws_single_page_nav_drawer_3_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ws_switch_thumb_mtrl_14w.png.flat",
+        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\drawable-hdpi-v4\\ws_switch_thumb_mtrl_14w.png"
     },
     {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
@@ -56,12 +56,12 @@
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\drawable-v23\\ic_cc_settings_button_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\layout-v23_ws_action_drawer_title_view.xml.flat",
-        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\layout-v23\\ws_action_drawer_title_view.xml"
-    },
-    {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ws_switch_thumb_mtrl_17w.png.flat",
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\drawable-xxhdpi-v4\\ws_switch_thumb_mtrl_17w.png"
+    },
+    {
+        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\layout-v23_ws_action_drawer_title_view.xml.flat",
+        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\layout-v23\\ws_action_drawer_title_view.xml"
     },
     {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\layout-v23_ws_action_drawer_peek_view.xml.flat",
@@ -124,12 +124,12 @@
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\layout\\ws_single_page_nav_drawer_2_item.xml"
     },
     {
-        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-v23_ws_ic_more_vert_24dp_wht.xml.flat",
-        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\drawable-v23\\ws_ic_more_vert_24dp_wht.xml"
-    },
-    {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-v23_ic_more_vert_24dp_wht.xml.flat",
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\drawable-v23\\ic_more_vert_24dp_wht.xml"
+    },
+    {
+        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-v23_ws_ic_more_vert_24dp_wht.xml.flat",
+        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\drawable-v23\\ws_ic_more_vert_24dp_wht.xml"
     },
     {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
@@ -196,24 +196,24 @@
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\cef7b47decd3b2a8c71c8b1d6579eef7\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-v23_action_item_background.xml.flat",
-        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\drawable-v23\\action_item_background.xml"
-    },
-    {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ws_switch_thumb_mtrl_18w.png.flat",
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\drawable-xxhdpi-v4\\ws_switch_thumb_mtrl_18w.png"
+    },
+    {
+        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-v23_action_item_background.xml.flat",
+        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\drawable-v23\\action_item_background.xml"
     },
     {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark_focused.xml.flat",
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\668b4ba5573574f38e875568e7738aad\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
     },
     {
-        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\layout_alert_dialog_wearable.xml.flat",
-        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\layout\\alert_dialog_wearable.xml"
-    },
-    {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\layout_single_page_nav_drawer_3_item.xml.flat",
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\layout\\single_page_nav_drawer_3_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\layout_alert_dialog_wearable.xml.flat",
+        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\layout\\alert_dialog_wearable.xml"
     },
     {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
@@ -296,24 +296,24 @@
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\668b4ba5573574f38e875568e7738aad\\res\\drawable-hdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
-        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg.xml.flat",
-        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\cef7b47decd3b2a8c71c8b1d6579eef7\\res\\drawable\\notification_bg.xml"
-    },
-    {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light_normal.xml.flat",
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\668b4ba5573574f38e875568e7738aad\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg.xml.flat",
+        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\cef7b47decd3b2a8c71c8b1d6579eef7\\res\\drawable\\notification_bg.xml"
     },
     {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ws_switch_track_mtrl.png.flat",
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\drawable-xhdpi-v4\\ws_switch_track_mtrl.png"
     },
     {
-        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ws_switch_thumb_mtrl_14w.png.flat",
-        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\drawable-xhdpi-v4\\ws_switch_thumb_mtrl_14w.png"
-    },
-    {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_dark.xml.flat",
         "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\668b4ba5573574f38e875568e7738aad\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ws_switch_thumb_mtrl_14w.png.flat",
+        "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\drawable-xhdpi-v4\\ws_switch_thumb_mtrl_14w.png"
     },
     {
         "merged": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_googleg_standard_color_18.png.flat",
