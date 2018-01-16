@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt-rBR\\values-pt-rBR.xml",
+            "outputFile": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt-rBR\\values-pt-rBR.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\cef7b47decd3b2a8c71c8b1d6579eef7\\res\\values-pt-rBR\\values-pt-rBR.xml",
+                    "source": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\cef7b47decd3b2a8c71c8b1d6579eef7\\res\\values-pt-rBR\\values-pt-rBR.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.8.0.aar\\1c149b40e892541c4a824373d2f282c0\\res\\values-pt-rBR\\values.xml",
+                    "source": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.8.0.aar\\1c149b40e892541c4a824373d2f282c0\\res\\values-pt-rBR\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\values-pt-rBR\\values.xml",
+                    "source": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\values-pt-rBR\\values.xml",
                     "from": {
                         "startLines": "4,7,10,13,16,19,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -57,7 +57,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\668b4ba5573574f38e875568e7738aad\\res\\values-pt-rBR\\values.xml",
+                    "source": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\668b4ba5573574f38e875568e7738aad\\res\\values-pt-rBR\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -71,6 +71,81 @@
                         "startOffsets": "4717,4824,5004,5133,5243,5469,5601,5753,6091,6320,6430,6625,6757,6973,7160,7259,7355",
                         "endColumns": "106,179,128,109,225,131,151,133,228,109,194,131,215,186,98,95,112",
                         "endOffsets": "4819,4999,5128,5238,5464,5596,5748,5882,6315,6425,6620,6752,6968,7155,7254,7350,7463"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/arstartupcrawl2/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml",
+            "map": [
+                {
+                    "source": "/Users/andrew/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/c3076195f32d4c798a202fc31a333866/res/values-pt-rBR/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "287",
+                        "endColumns": "203",
+                        "endOffsets": "490"
+                    },
+                    "to": {
+                        "startLines": "56",
+                        "startColumns": "4",
+                        "startOffsets": "5887",
+                        "endColumns": "203",
+                        "endOffsets": "6086"
+                    }
+                },
+                {
+                    "source": "/Users/andrew/.gradle/caches/transforms-1/files-1.1/wearable-2.1.0.aar/224a2eec972027f1fa4089bcf9143a86/res/values-pt-rBR/values.xml",
+                    "from": {
+                        "startLines": "4,7,10,13,16,19,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "302,552,805,1064,1320,1581,1844,1940,2043,2146,2255,2357,2463,2572,2674,2780,2872,2972,3072,3169,3273,3393,3513,3617,3737,3857,3960,4063,4157,4258,4375,4492,4592,4709,4826,4914,4992,5062,5174,5254,5426",
+                        "endLines": "6,9,12,15,18,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56",
+                        "endColumns": "10,10,10,10,10,10,95,102,102,108,101,105,108,101,105,91,99,99,96,103,119,119,103,119,119,102,102,93,100,116,116,99,116,116,87,77,69,111,79,171,177",
+                        "endOffsets": "551,804,1063,1319,1580,1843,1939,2042,2145,2254,2356,2462,2571,2673,2779,2871,2971,3071,3168,3272,3392,3512,3616,3736,3856,3959,4062,4156,4257,4374,4491,4591,4708,4825,4913,4991,5061,5173,5253,5425,5603"
+                    },
+                    "to": {
+                        "startLines": "2,5,8,11,14,17,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,66,67,68,69,71,72,73",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,351,600,855,1107,1364,1623,1723,1830,1937,2050,2156,2266,2379,2485,2595,2691,2795,2899,3000,3108,3232,3356,3464,3588,3712,3819,3926,4024,4129,4250,4371,4475,4596,7468,7560,7642,7716,7933,8017,8185",
+                        "endLines": "4,7,10,13,16,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,66,67,68,69,71,72,73",
+                        "endColumns": "10,10,10,10,10,10,99,106,106,112,105,109,112,105,109,95,103,103,100,107,123,123,107,123,123,106,106,97,104,120,120,103,120,120,91,81,73,115,83,167,173",
+                        "endOffsets": "346,595,850,1102,1359,1618,1718,1825,1932,2045,2151,2261,2374,2480,2590,2686,2790,2894,2995,3103,3227,3351,3459,3583,3707,3814,3921,4019,4124,4245,4366,4470,4591,4712,7555,7637,7711,7827,8012,8180,8354"
+                    }
+                },
+                {
+                    "source": "/Users/andrew/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/56cb221ffd7571a386735945a171237d/res/values-pt-rBR/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "285,388,568,693,799,1025,1153,1301,1431,1660,1766,1961,2089,2305,2488,2583,2675",
+                        "endColumns": "102,179,124,105,225,127,147,129,228,105,194,127,215,182,94,91,108",
+                        "endOffsets": "387,567,692,798,1024,1152,1300,1430,1659,1765,1960,2088,2304,2487,2582,2674,2783"
+                    },
+                    "to": {
+                        "startLines": "48,49,50,51,52,53,54,55,57,58,59,60,61,62,63,64,65",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4717,4824,5004,5133,5243,5469,5601,5753,6091,6320,6430,6625,6757,6973,7160,7259,7355",
+                        "endColumns": "106,179,128,109,225,131,151,133,228,109,194,131,215,186,98,95,112",
+                        "endOffsets": "4819,4999,5128,5238,5464,5596,5748,5882,6315,6425,6620,6752,6968,7155,7254,7350,7463"
+                    }
+                },
+                {
+                    "source": "/Users/andrew/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/0520a195db2d6792c800e610215467c6/res/values-pt-rBR/values-pt-rBR.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "70",
+                        "startColumns": "4",
+                        "startOffsets": "7832",
+                        "endColumns": "100",
+                        "endOffsets": "7928"
                     }
                 }
             ]

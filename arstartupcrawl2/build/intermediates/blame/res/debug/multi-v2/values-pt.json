@@ -1,10 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt\\values-pt.xml",
+            "outputFile": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/arstartupcrawl2/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\cef7b47decd3b2a8c71c8b1d6579eef7\\res\\values-pt\\values-pt.xml",
+                    "source": "/Users/andrew/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/0520a195db2d6792c800e610215467c6/res/values-pt/values-pt.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt\\values-pt.xml",
+            "map": [
+                {
+                    "source": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\cef7b47decd3b2a8c71c8b1d6579eef7\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

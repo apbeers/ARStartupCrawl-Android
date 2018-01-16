@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/C:\\Users\\shawn\\AndroidStudioProjects\\ARStartupCrawl\\arstartupcrawl2\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\values-v23\\values-v23.xml",
+                    "source": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wear-26.1.0.aar\\00674d1821989479c00793d92bc214c2\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,10",
                         "startColumns": "4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\values-v23\\values.xml",
+                    "source": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/C:\\Users\\shawn\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.1.0.aar\\7fb1acd412d5dafe01d822e4b57c8a4e\\res\\values-v23\\values.xml",
                     "from": {
                         "startLines": "4,8,12,20,23",
                         "startColumns": "0,0,0,0,0",
@@ -39,6 +39,49 @@
                         "endLines": "5,9,17,20,22",
                         "endColumns": "8,8,8,8,8",
                         "endOffsets": "216,384,789,934,1038"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/andrew/AndroidStudioProjects/ARStartupCrawl/arstartupcrawl2/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
+            "map": [
+                {
+                    "source": "/Users/andrew/.gradle/caches/transforms-1/files-1.1/wearable-2.1.0.aar/224a2eec972027f1fa4089bcf9143a86/res/values-v23/values.xml",
+                    "from": {
+                        "startLines": "4,8,12,20,23",
+                        "startColumns": "0,0,0,0,0",
+                        "startOffsets": "211,373,537,938,1079",
+                        "endLines": "7,11,19,22,24",
+                        "endColumns": "8,8,8,8,8",
+                        "endOffsets": "372,536,937,1078,1178"
+                    },
+                    "to": {
+                        "startLines": "2,6,10,18,21",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,221,389,794,939",
+                        "endLines": "5,9,17,20,22",
+                        "endColumns": "8,8,8,8,8",
+                        "endOffsets": "216,384,789,934,1038"
+                    }
+                },
+                {
+                    "source": "/Users/andrew/.gradle/caches/transforms-1/files-1.1/wear-26.1.0.aar/8355bdf1d4a669ced3cdf9f04124344b/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,517",
+                        "endLines": "9,12",
+                        "endColumns": "12,12",
+                        "endOffsets": "512,671"
+                    },
+                    "to": {
+                        "startLines": "23,31",
+                        "startColumns": "4,4",
+                        "startOffsets": "1043,1505",
+                        "endLines": "30,33",
+                        "endColumns": "12,12",
+                        "endOffsets": "1500,1659"
                     }
                 }
             ]
