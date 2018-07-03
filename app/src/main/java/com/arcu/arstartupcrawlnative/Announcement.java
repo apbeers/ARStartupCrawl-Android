@@ -20,10 +20,9 @@ public class Announcement {
     }
 
     @Keep
-    public Announcement(String dateTime, String description, String startup, String title) {
+    public Announcement(String dateTime, String description, String title) {
         this.dateTime = dateTime;
         this.description = description;
-        this.startup = startup;
         this.title = title;
     }
 
@@ -35,11 +34,6 @@ public class Announcement {
     @Keep
     public String getDescription() {
         return description;
-    }
-
-    @Keep
-    public String getStartup() {
-        return startup;
     }
 
     @Keep
