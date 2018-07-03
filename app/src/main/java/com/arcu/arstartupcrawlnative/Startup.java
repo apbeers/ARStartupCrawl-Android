@@ -14,7 +14,6 @@ import com.google.android.gms.maps.model.LatLng;
 @Keep
 public class Startup {
 
-
     private String description;
     private int id;
     private double latitude;
