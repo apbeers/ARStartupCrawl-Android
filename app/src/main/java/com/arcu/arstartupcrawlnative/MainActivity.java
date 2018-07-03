@@ -169,6 +169,7 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.hide(startupMapFragment);
             fragmentTransaction.hide(startupsFragment);
             fragmentTransaction.show(announcementFragment);
+            announcementFragment.update();
             fragmentTransaction.commit();
         }
 

@@ -1,5 +1,6 @@
 package com.arcu.arstartupcrawlnative;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -25,6 +26,7 @@ public class AnnouncementFragment extends Fragment {
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
     private int mColumnCount = 1;
+    RecyclerView recyclerView;
     private OnListFragmentInteractionListener mListener;
     private AnnouncementManager announcementManager = AnnouncementManager.getManager();
 
@@ -62,13 +64,13 @@ public class AnnouncementFragment extends Fragment {
         // Set the adapter
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
+            recyclerView = (RecyclerView) view;
             if (mColumnCount <= 1) {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyAnnouncementRecyclerViewAdapter(announcementManager.getAnnouncements(), mListener));
+            recyclerView.setAdapter(new MyAnnouncementRecyclerViewAdapter(announcementManager.getAnnouncements(getActivity().getBaseContext()), mListener));
         }
         return view;
     }

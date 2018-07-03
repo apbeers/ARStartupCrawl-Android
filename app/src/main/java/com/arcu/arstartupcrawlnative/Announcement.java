@@ -7,7 +7,7 @@ import android.support.annotation.Keep;
  */
 
 @Keep
-public class Announcement {
+public class Announcement extends Object {
 
     private String dateTime;
     private String description;

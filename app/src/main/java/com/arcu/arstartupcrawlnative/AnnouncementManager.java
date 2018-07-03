@@ -1,6 +1,13 @@
 package com.arcu.arstartupcrawlnative;
 
+import android.app.Activity;
+import android.app.Application;
+import android.content.Context;
+
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Created by andrew on 11/27/17.
@@ -8,29 +15,26 @@ import java.util.ArrayList;
 
 public class AnnouncementManager {
 
+    private Context context;
+
     private ArrayList<Announcement> announcements = new ArrayList<>();
+    private TinyDB tinydb;
 
-    public ArrayList<Announcement> getAnnouncements() {
+    public ArrayList<Announcement> getAnnouncements(Context context) {
 
-        announcements.add(new Announcement("myDateTime", "This is my longer Description about the notification to display to the user on the announcement page", "myTitle"));
-        announcements.add(new Announcement("myDateTime", "This is my longer Description about the notification to display to the user on the announcement page", "myTitle"));
-        announcements.add(new Announcement("myDateTime", "This is my longer Description about the notification to display to the user on the announcement page", "myTitle"));
-        announcements.add(new Announcement("myDateTime", "This is my longer Description about the notification to display to the user on the announcement page", "myTitle"));
-        announcements.add(new Announcement("myDateTime", "This is my longer Description about the notification to display to the user on the announcement page", "myTitle"));
+        tinydb = new TinyDB(context);
 
-        return announcements;
+        return tinydb.getListAnnouncements("announcements");
     }
 
-    public void setAnnouncements(ArrayList<Announcement> a) {
-        this.announcements = a;
-    }
+    public void addAnnouncement(Context context, Announcement a) {
 
-    public void addStartup(Announcement a) {
+        announcements.clear();
+        announcements = tinydb.getListAnnouncements("announcements");
         announcements.add(a);
-    }
-
-    public int getCount() {
-        return announcements.size();
+        Collections.reverse(announcements);
+        tinydb = new TinyDB(context);
+        tinydb.putListAnnouncements("announcements", announcements);
     }
 
     private static final AnnouncementManager manager = new AnnouncementManager();
