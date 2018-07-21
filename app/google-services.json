@@ -15,11 +15,27 @@
       },
       "oauth_client": [
         {
+          "client_id": "920757057234-ab4l29l7dt357ciorcau1mhcq2n1kmgu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arcu.arstartupcrawlnative",
+            "certificate_hash": "5e9ca4f118fd6d96df2c2bd6dfd4e675d5c21a41"
+          }
+        },
+        {
           "client_id": "920757057234-o0tchvmjquk0jemoenelgrcjq4eqi0ao.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.arcu.arstartupcrawlnative",
             "certificate_hash": "6f20484bdfb81a142f51eaba0559fcb4725b887d"
+          }
+        },
+        {
+          "client_id": "920757057234-04ip0foft7n93uh8au907e4ks7lc7ca8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arcu.arstartupcrawlnative",
+            "certificate_hash": "121a1983fcf66b397888ee5af55bc104be053b3a"
           }
         },
         {
@@ -40,15 +56,16 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "920757057234-9t15q6us80vf0be499vgt297sqkqu9lj.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "arcu.AR-Startup-Crawl"
-              }
-            },
-            {
               "client_id": "920757057234-965ugos0d6qgf51lc3tnu7gdecvkelup.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "920757057234-g1sb70hicm26kvsm6vjv0fo7lnjhcb9g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.arcu.ar-startup-crawl",
+                "app_store_id": "1314272058"
+              }
             }
           ]
         },
