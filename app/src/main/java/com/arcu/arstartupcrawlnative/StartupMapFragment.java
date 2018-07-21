@@ -134,19 +134,6 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
                     1);
         }
 
-        try {
-            // Customise the styling of the base map using a JSON object defined
-            // in a raw resource file.
-            boolean success = googleMap.setMapStyle(
-                    MapStyleOptions.loadRawResourceStyle(
-                            getContext(), R.raw.style));
-
-            if (!success) {
-                Log.e(TAG, "Style parsing failed.");
-            }
-        } catch (Resources.NotFoundException e) {
-            Log.e(TAG, "Can't find style. Error: ", e);
-        }
 
         LatLng fayettevilleSquare = new LatLng(36.063610, -94.162561);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fayettevilleSquare, 15));
@@ -168,8 +155,7 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
             mMap.addMarker(new MarkerOptions()
                     .position(startup.getLatLng())
                     .title(startup.getTitle())
-                    .snippet(startup.getSnippet())
-                    .icon(bitmapDescriptor));
+                    .snippet(startup.getSnippet()));
         }
     }
 

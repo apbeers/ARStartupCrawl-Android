@@ -22,14 +22,12 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         StartupMapFragment.OnFragmentInteractionListener,
-        StartupsFragment.OnListFragmentInteractionListener,
-        AnnouncementFragment.OnListFragmentInteractionListener {
+        StartupsFragment.OnListFragmentInteractionListener {
 
     int lastMenuItemId = 10;
     private NavigationView navigationView;
     private StartupMapFragment startupMapFragment;
     private StartupsFragment startupsFragment;
-    private AnnouncementFragment announcementFragment;
     private final FragmentManager fragmentManager = getFragmentManager();
     private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
     private StartupManager startupManager = StartupManager.getManager();
@@ -50,13 +48,11 @@ public class MainActivity extends AppCompatActivity
 
         startupMapFragment = new StartupMapFragment();
         startupsFragment = new StartupsFragment();
-        announcementFragment = new AnnouncementFragment();
 
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.add(R.id.container, startupMapFragment);
         fragmentTransaction.add(R.id.container, startupsFragment);
-        fragmentTransaction.add(R.id.container, announcementFragment);
         fragmentTransaction.commit();
 
 
@@ -154,22 +150,12 @@ public class MainActivity extends AppCompatActivity
 
             fragmentTransaction.show(startupMapFragment);
             fragmentTransaction.hide(startupsFragment);
-            fragmentTransaction.hide(announcementFragment);
             fragmentTransaction.commit();
 
         } else if (id == R.id.startup_list) {
 
             fragmentTransaction.hide(startupMapFragment);
             fragmentTransaction.show(startupsFragment);
-            fragmentTransaction.hide(announcementFragment);
-            fragmentTransaction.commit();
-
-        } else if (id == R.id.event_updates) {
-
-            fragmentTransaction.hide(startupMapFragment);
-            fragmentTransaction.hide(startupsFragment);
-            fragmentTransaction.show(announcementFragment);
-            announcementFragment.update();
             fragmentTransaction.commit();
         }
 
@@ -185,11 +171,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onListFragmentInteraction(Startup item) {
-
-    }
-
-    @Override
-    public void onListFragmentInteraction(Announcement item) {
 
     }
 }

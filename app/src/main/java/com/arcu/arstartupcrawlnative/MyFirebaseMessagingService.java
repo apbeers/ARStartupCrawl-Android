@@ -42,10 +42,6 @@ import java.util.Date;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
-    AnnouncementManager announcementManager = AnnouncementManager.getManager();
-
-    private ArrayList<Announcement> announcements = new ArrayList<>();
-
     private static final String TAG = "MyAndroidFCMService";
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -59,7 +55,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private void createNotification(String messageTitle, String messageBody) {
 
         SimpleDateFormat sdf = new SimpleDateFormat("hh:mm aa");
-        announcementManager.addAnnouncement(getApplicationContext(), new Announcement(sdf.format(new Date(System.currentTimeMillis())), messageBody, messageTitle));
 
         Intent intent = new Intent( this , MainActivity.class );
         intent.putExtra("announcementFragment", true);

@@ -12,9 +12,6 @@
             android:id="@+id/startup_list"
             android:icon="@drawable/ic_store_mall_directory_black_24dp"
             android:title="Startups" />
-        <item
-            android:id="@+id/event_updates"
-            android:icon="@drawable/ic_announcement_black_24dp"
-            android:title="Announcements" />
+
     </group>
 </menu>
