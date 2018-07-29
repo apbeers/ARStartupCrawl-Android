@@ -22,12 +22,14 @@ import com.google.firebase.database.FirebaseDatabase;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         StartupMapFragment.OnFragmentInteractionListener,
-        StartupsFragment.OnListFragmentInteractionListener {
+        StartupsFragment.OnListFragmentInteractionListener,
+        SponsorsFragment.OnFragmentInteractionListener {
 
     int lastMenuItemId = 10;
     private NavigationView navigationView;
     private StartupMapFragment startupMapFragment;
     private StartupsFragment startupsFragment;
+    private SponsorsFragment sponsorsFragment;
     private final FragmentManager fragmentManager = getFragmentManager();
     private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
     private StartupManager startupManager = StartupManager.getManager();
@@ -148,14 +150,35 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         if (id == R.id.startup_map) {
 
+            if (sponsorsFragment != null) {
+                fragmentTransaction.hide(sponsorsFragment);
+            }
+
             fragmentTransaction.show(startupMapFragment);
             fragmentTransaction.hide(startupsFragment);
             fragmentTransaction.commit();
 
         } else if (id == R.id.startup_list) {
 
+            if (sponsorsFragment != null) {
+                fragmentTransaction.hide(sponsorsFragment);
+            }
+
             fragmentTransaction.hide(startupMapFragment);
             fragmentTransaction.show(startupsFragment);
+            fragmentTransaction.commit();
+
+        } else if (id == R.id.sponsors) {
+
+            if (sponsorsFragment != null) {
+                fragmentTransaction.show(sponsorsFragment);
+            } else {
+                sponsorsFragment = new SponsorsFragment();
+                fragmentTransaction.add(R.id.container, sponsorsFragment);
+            }
+
+            fragmentTransaction.hide(startupMapFragment);
+            fragmentTransaction.hide(startupsFragment);
             fragmentTransaction.commit();
         }
 

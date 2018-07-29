@@ -12,6 +12,10 @@
             android:id="@+id/startup_list"
             android:icon="@drawable/ic_store_mall_directory_black_24dp"
             android:title="Startups" />
+        <item
+            android:id="@+id/sponsors"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="Sponsors" />
 
     </group>
 </menu>
