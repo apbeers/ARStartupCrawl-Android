@@ -59,7 +59,7 @@ public class SponsorsFragment extends Fragment {
         pdfView = (PDFView)view.findViewById(R.id.pdfView);
 
         InputStream inputStream = getResources().openRawResource(
-                getResources().getIdentifier("red_26",
+                getResources().getIdentifier("sponsors",
                         "raw", getActivity().getPackageName()));
 
         pdfView.fromStream(inputStream)
