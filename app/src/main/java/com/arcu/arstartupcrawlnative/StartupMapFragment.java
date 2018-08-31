@@ -32,6 +32,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -60,6 +61,7 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
 
     private int markerImageWidth;
     private int markerImageHeight;
+    private CameraUpdate cu;
     private DatabaseReference mDatabase= FirebaseDatabase.getInstance().getReference();
     private StartupManager startupManager = StartupManager.getManager();
 
@@ -134,9 +136,16 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
                     1);
         }
 
-
         LatLng fayettevilleSquare = new LatLng(36.063610, -94.162561);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(fayettevilleSquare, 15));
+
+
+        mMap.setOnMapLoadedCallback(new GoogleMap.OnMapLoadedCallback() {
+            @Override
+            public void onMapLoaded() {
+                mMap.animateCamera(cu);
+            }
+        });
     }
 
     public void refreshStartups() {
@@ -149,13 +158,23 @@ public class StartupMapFragment extends Fragment implements OnMapReadyCallback {
         final Bitmap scaledBitmap = Bitmap.createScaledBitmap(bitmap, markerImageWidth,markerImageHeight,true);
         final BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromBitmap(scaledBitmap);
 
-        for (Startup startup:
-                startupManager.getStartups()) {
+        LatLngBounds.Builder builder = new LatLngBounds.Builder();
 
-            mMap.addMarker(new MarkerOptions()
-                    .position(startup.getLatLng())
-                    .title(startup.getTitle())
-                    .snippet(startup.getSnippet()));
+        if (startupManager.getStartups().size() != 0) {
+
+            for (Startup startup:
+                    startupManager.getStartups()) {
+
+                mMap.addMarker(new MarkerOptions()
+                        .position(startup.getLatLng())
+                        .title(startup.getTitle())
+                        .snippet(startup.getSnippet()));
+                builder.include(startup.getLatLng());
+            }
+
+            LatLngBounds bounds = builder.build();
+            int padding = markerImageHeight; // offset from edges of the map in pixels
+            cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
         }
     }
 
