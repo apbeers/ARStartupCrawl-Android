@@ -14,8 +14,8 @@ android {
         applicationId "com.arcu.arstartupcrawlnative"
         minSdkVersion 23
         targetSdkVersion 26
-        versionCode 24
-        versionName "1.1.1"
+        versionCode 27
+        versionName "1.1.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
